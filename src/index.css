@@ -1,13 +1,175 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hide {
+    display: none;
+}
+
+.reveal {
+    display: block;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-color: rgb(163, 159, 158);
+}
+
+form {
+    width: 75%;
+    background-color: white;
+    height: fit-content;
+    padding: 10px 20px 20px 20px;
+}
+
+form h1,
+form p {
+    padding: 0.625em 0.625em;
+    text-align: center;
+}
+
+form div {
+    padding-bottom: 20px;
+}
+
+input,
+label,
+textarea {
+    width: 100%;
+    font-size: 1.2em;
+    font-family: inherit;
+    display: inline-block;
+}
+
+input,
+textarea {
+    text-indent: 0.2em;
+    padding: 0.2em;
+}
+
+textarea {
+    height: 100px;
+}
+
+#root {
+    border: solid;
+    height: 100vh;
+}
+
+.project-title {
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.submit-container {
+    width: 50%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 2px 2px;
+}
+
+.edit-container {
+    width: fit-content;
+    grid-area: d;
+    height: fit-content;
+    float: right;
+}
+
+.submit-btn,
+.edit-btn {
+    border: none;
+    font-size: 1.25em;
+    width: 100%;
+}
+
+.submit-btn {
+    background-color: rgb(82, 138, 250);
+    color: white;
+    padding: 15px 32px;
+}
+
+.edit-btn {
+    background-color: rgb(50, 143, 168);
+    color: white;
+    padding: 10px 20px;
+}
+
+.cv-container {
+    width: 75%;
+    height: fit-content;
+    font-size: 1.2em;
+    padding: 10px 20px 10px 20px;
+}
+
+.cv-container.reveal {
+    background-color: white;
+    display: grid;
+    column-gap: 30px;
+    grid-template-areas:
+        "a a b b b"
+        "a a c c c"
+        "a a . . d";
+}
+
+.cv-container.reveal p {
+    line-height: 32px;
+    margin: 10px 0;
+}
+
+.personal-info {
+    width: fit-content;
+    height: 100vh;
+    background-color: rgb(50, 143, 168);
+    color: white;
+    padding: 20px 10px 0 10px;
+    margin: -10px -15px -10px -20px;
+    grid-area: a;
+}
+
+.education {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px 10px 10px;
+    grid-area: b;
+}
+
+.work {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px 10px 10px;
+    grid-area: c;
+}
+
+@media only screen and (min-width: 1100px) {
+    form,
+    .cv-container.reveal {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    form,
+    .cv-container.reveal {
+        width: 100%;
+    }
 }
