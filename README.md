@@ -10,3 +10,5 @@ DisplayCvApp.js: responsible for rendering resume after the user has submitted t
 
 App.js: Responsible for holding the state, and methods and passing it down to Form.js and 
 DisplayCvApp.js.
+
+[Live project](http://GT0221.github.io/cv-project)
